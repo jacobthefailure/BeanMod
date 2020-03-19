@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+          [
+            "BB",
+            "BB"
+
+          ],
+
+
+  "key": {
+    "B": {"item":"beanmod:bean"}
+  },
+
+  "result":{"item":"beanmod:solidified_bean"}
+}

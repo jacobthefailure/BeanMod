@@ -1,0 +1,11 @@
+{
+    "item.beanmod.bean": "Bean",
+
+    "item.beanmod.cooked_bean": "Cooked Bean",
+
+    "block.beanmod.solidified_bean": "Solidified Bean",
+
+    "block.beanmod.bean_crop": "Bean",
+
+    "itemGroup.bean": "Bean Mod"
+}

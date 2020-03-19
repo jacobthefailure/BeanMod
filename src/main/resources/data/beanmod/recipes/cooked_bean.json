@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+
+  "ingredient": { "tag": "beanmod:bean" },
+  "result":{"item":"beanmod:cooked_bean"},
+  "experience": 4
+}

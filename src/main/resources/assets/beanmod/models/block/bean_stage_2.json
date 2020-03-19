@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "beanmod:block/bean_crop_2"
+    }
+}
