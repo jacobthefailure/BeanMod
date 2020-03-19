@@ -3,15 +3,19 @@
 
   "pattern":
           [
-            "BB",
-            "BB"
+            " G ",
+            "LBL",
+            " L "
 
           ],
 
 
   "key": {
-    "B": {"item":"beanmod:bean"}
+    "B": {"item":"beanmod:bean"},
+    "L": {"item": "minecraft:glowstone_dust"},
+    "G": {"item":  "minecraft:gold_ingot"}
+
   },
 
-  "result":{"item":"beanmod:solidified_bean"}
+  "result":{"item":"beanmod:sparkling_bean"}
 }

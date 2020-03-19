@@ -1,6 +1,4 @@
 package mod.jacob.beanmod;
-import net.minecraft.item.ItemGroup;
-import mod.jacob.beanmod.lists.BlockList;
 import mod.jacob.beanmod.lists.ItemList;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;

@@ -3,8 +3,6 @@ package mod.jacob.beanmod;
 import mod.jacob.beanmod.lists.BlockList;
 import mod.jacob.beanmod.lists.ItemList;
 import net.minecraft.block.Block;
-import net.minecraft.block.CropsBlock;
-import net.minecraft.block.FarmlandBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
@@ -13,15 +11,10 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Foods;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.EffectType;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.storage.loot.LootEntry;
-import net.minecraft.world.storage.loot.LootPool;
-import net.minecraft.world.storage.loot.TableLootEntry;
-import net.minecraft.world.storage.loot.conditions.ILootCondition;
-import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolType;
-import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -52,6 +45,8 @@ public class BeanMod {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+
+        SaturationPotionRecipe.setup(event);
         logger.info("Setup method registered.");
     }
 
@@ -103,9 +98,11 @@ public class BeanMod {
                         //actual items
 
                         ItemList.cooked_bean = new Item(new Item.Properties().food(Foods.POTATO).group(bean)).setRegistryName(location("cooked_bean")),
+                        ItemList.sparkling_bean = new Item(new Item.Properties().group(bean)).setRegistryName(location("sparkling_bean")),
                         //blocks
                         ItemList.solidified_bean = new BlockItem(BlockList.solidified_bean, new Item.Properties().group(bean)).setRegistryName(BlockList.solidified_bean.getRegistryName()),
                         ItemList.bean = new BlockItem(BlockList.bean_crop, new Item.Properties().food(Foods.DRIED_KELP).group(bean)).setRegistryName(location("bean"))
+
                 );
 
 
@@ -123,6 +120,8 @@ public class BeanMod {
                 event.getRegistry().register(BlockList.bean_crop);
                 logger.info("Blocks registered! :)");
             }
+
+
 
             private static ResourceLocation location(String name) {
 
