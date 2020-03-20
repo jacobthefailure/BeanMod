@@ -9,5 +9,15 @@
 
     "block.beanmod.bean_crop": "Bean",
 
-    "itemGroup.bean": "Bean Mod"
+    "itemGroup.bean": "Bean Mod",
+
+    "effect.beanmod.feeding": "Feeding",
+
+    "item.minecraft.potion.effect.beanmod_feeding": "Potion of Feeding",
+
+    "item.minecraft.lingering_potion.effect.beanmod_feeding": "Lingering Potion of Feeding",
+
+    "item.minecraft.splash_potion.effect.beanmod_feeding": "Splash Potion of Feeding",
+
+    "item.minecraft.tipped_arrow.effect.beanmod_feeding": "Arrow of Feeding"
 }

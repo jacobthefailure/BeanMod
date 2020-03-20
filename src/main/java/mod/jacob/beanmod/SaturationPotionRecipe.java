@@ -29,8 +29,8 @@ public class SaturationPotionRecipe {
 
 
     public static class PotionItem {
-        @ObjectHolder(modid + ":saturation")
-        public static Potion saturation;
+        @ObjectHolder(modid + ":feeding")
+        public static Potion feeding;
 
     }
 
@@ -59,15 +59,15 @@ public class SaturationPotionRecipe {
     @SubscribeEvent
     public static void onPotRegistry(RegistryEvent.Register<Potion> event) {
         IForgeRegistry<Potion> r = event.getRegistry();
-        r.register(new Potion(modid+"_feeding", new EffectInstance(PotionEffects.feeding)).setRegistryName(modid + ":feeding"));
+        r.register(new Potion(modid+"_feeding", new EffectInstance(PotionEffects.feeding,3000,0)).setRegistryName(modid + ":feeding"));
 
 
     }
 
     public static void setup(FMLCommonSetupEvent event) {
-        basicBrewing(SaturationPotionRecipe.PotionItem.saturation, ItemList.sparkling_bean);
-        splashBrewing(SaturationPotionRecipe.PotionItem.saturation);
-        lingerBrewing(SaturationPotionRecipe.PotionItem.saturation, ItemList.sparkling_bean);
+        basicBrewing(SaturationPotionRecipe.PotionItem.feeding, ItemList.sparkling_bean);
+        splashBrewing(SaturationPotionRecipe.PotionItem.feeding);
+        lingerBrewing(SaturationPotionRecipe.PotionItem.feeding, ItemList.sparkling_bean);
 
     }
 
